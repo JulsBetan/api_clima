@@ -18,10 +18,12 @@ COPY .prod_env /app/.prod_env
 
 ENV NODE_ENV=production
 
+RUN npm install --save-dev @types/node
+
 RUN npm run build
 
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "run", "start"]
+CMD ["node", "dist/main"]
