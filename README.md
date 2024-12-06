@@ -71,3 +71,49 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+API Clima
+
+Este repositorio contiene la API para la integración con servicios externos de clima, utilizada en la aplicación King Tide.
+
+Requisitos previos
+
+	•	Node.js v16 o superior
+	•	npm o yarn
+
+Instalación
+
+	1.	Clonar el repositorio:
+git clone https://github.com/usuario/api_clima.git
+cd api_clima
+	2.	Instalar dependencias:
+npm install
+	3.	Configurar variables de entorno en un archivo .env.
+
+Desarrollo local
+
+Para ejecutar el entorno de desarrollo:
+npm run start:dev
+
+La API estará disponible en http://localhost:3000.
+
+Docker
+
+Construir la imagen Docker:
+
+docker build -t usuario/api_clima:latest .
+
+Ejecutar el contenedor:
+
+docker run -p 3000:3000 usuario/api_clima:latest
+
+Endpoints
+
+	•	/clima?city=<nombre>: Devuelve información del clima para la ciudad especificada.
+	•	/clima?lat=<lat>&lon=<lon>: Devuelve información del clima basado en coordenadas.
+
+Pruebas
+
+Ejecutar pruebas unitarias:
+npm test
+
