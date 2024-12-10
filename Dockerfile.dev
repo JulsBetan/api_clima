@@ -8,6 +8,12 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+# Instalar NestJS CLI globalmente para desarrollo
+RUN npm install -g @nestjs/cli
+
+# Instalar definiciones de tipo para Node.js (si son necesarias)
+RUN npm install @types/node --save-dev
+
 # Copy the rest of the application
 COPY . .
 
