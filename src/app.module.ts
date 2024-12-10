@@ -6,7 +6,7 @@ import { ClimaModule } from './clima/clima.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true, // Hace que las variables estén disponibles globalmente
-      envFilePath: process.env.NODE_ENV === 'production' ? '/app/.prod_env' : '.env', // Selecciona el archivo según el entorno
+      envFilePath: process.env.NODE_ENV === 'production' ? undefined : '.env', // Selecciona el archivo según el entorno
     }),
     ClimaModule, // Importa tus módulos aquí
   ],
